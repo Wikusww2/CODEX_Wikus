@@ -1,0 +1,220 @@
+Hello world
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing Ball</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script src="main.js"></script>
+  </body>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>ChatGPT Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #202124;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .header {
+      padding: 10px;
+      background-color: #3a3a3a;
+      color: #fff;
+      text-align: center;
+    }
+    .messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    .input-area {
+      display: flex;
+      padding: 10px;
+      background-color: #3a3a3a;
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4a90e2;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .message.bot {
+      color: #0f0;
+    }
+    .message.user {
+      color: #09f;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class='header'>ChatGPT Chatbot</div>
+  <div class='messages' id='messages'></div>
+  <div class='input-area'>
+    <input type='text' id='userInput' placeholder='Type your message...' />
+    <button id='sendBtn'>Send</button>
+  </div>
+  <script>
+    const messagesDiv = document.getElementById('messages');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    function addMessage(text, className) {
+      const message = document.createElement('div');
+      message.className = 'message ' + className;
+      message.innerText = text;
+      messagesDiv.appendChild(message);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    function handleSend() {
+      const text = userInput.value.trim();
+      if (text === '') return;
+      addMessage(text, 'user');
+      userInput.value = '';
+      // For now, echo the message, later connect to backend
+      addMessage('This is a placeholder response.', 'bot');
+    }
+
+    sendBtn.onclick = handleSend;
+    userInput.onkeydown = (e) => {
+      if (e.key === 'Enter') {
+        handleSend();
+      }
+    };
+  </script>
+</body>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>ChatGPT Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #202124;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .header {
+      padding: 10px;
+      background-color: #3a3a3a;
+      color: #fff;
+      text-align: center;
+    }
+    .messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    .input-area {
+      display: flex;
+      padding: 10px;
+      background-color: #3a3a3a;
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4a90e2;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .message.bot {
+      color: #0f0;
+    }
+    .message.user {
+      color: #09f;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class='header'>ChatGPT Chatbot</div>
+  <div class='messages' id='messages'></div>
+  <div class='input-area'>
+    <input type='text' id='userInput' placeholder='Type your message...' />
+    <button id='sendBtn'>Send</button>
+  </div>
+  <script>
+    const messagesDiv = document.getElementById('messages');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    function addMessage(text, className) {
+      const message = document.createElement('div');
+      message.className = 'message ' + className;
+      message.innerText = text;
+      messagesDiv.appendChild(message);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    function handleSend() {
+      const text = userInput.value.trim();
+      if (text === '') return;
+      addMessage(text, 'user');
+      userInput.value = '';
+      // For now, echo the message, later connect to backend
+      addMessage('This is a placeholder response.', 'bot');
+    }
+
+    sendBtn.onclick = handleSend;
+    userInput.onkeydown = (e) => {
+      if (e.key === 'Enter') {
+        handleSend();
+      }
+    };
+  </script>
+</body>
+</html>
