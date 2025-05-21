@@ -215,6 +215,7 @@ export type AppConfig = {
     };
   };
   fileOpener?: FileOpenerScheme;
+  safeCommands?: Array<string>;
 };
 
 // Formatting (quiet mode-only).
@@ -428,6 +429,7 @@ export const loadConfig = (
     instructions: combinedInstructions,
     notify: storedConfig.notify === true,
     approvalMode: storedConfig.approvalMode,
+    safeCommands: storedConfig.safeCommands,
     tools: {
       shell: {
         maxBytes:
@@ -560,6 +562,7 @@ export const saveConfig = (
     disableResponseStorage: config.disableResponseStorage,
     flexMode: config.flexMode,
     reasoningEffort: config.reasoningEffort,
+    safeCommands: config.safeCommands,
   };
 
   // Add history settings if they exist

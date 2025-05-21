@@ -27,9 +27,9 @@ $config = Get-Content -Path $configPath | ConvertFrom-Json
 
 # Make sure approvalMode is set to never for automatic command execution
 if ($config.PSObject.Properties.Name -contains "approvalMode") {
-    $config.approvalMode = "never"
+    $config.approvalMode = "full-auto"
 } else {
-    $config | Add-Member -NotePropertyName "approvalMode" -NotePropertyValue "never" -Force
+    $config | Add-Member -NotePropertyName "approvalMode" -NotePropertyValue "full-auto" -Force
 }
 
 # Ensure sandbox policy is set to allow full access
